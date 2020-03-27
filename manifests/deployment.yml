@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: pcjoshiblankazurerepo 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pcjoshiblankazurerepo 
+    spec:
+      containers:
+        - name: pcjoshiblankazurerepo 
+          image: rlincregistry.azurecr.io/pcjoshiblankazurerepo
+          ports:
+          - containerPort: 80
